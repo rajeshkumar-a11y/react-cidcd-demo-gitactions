@@ -4,10 +4,10 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Get code.
+            - name: Get code
               run: |
-                echo cloning the repository
-                echo ${{to json(github}}
-                git clone https://github.com/${{ github.repository }}.git myfiles
+                echo "cloning the repository"
+                echo "${{toJson(github}}""
+                git clone https://github.com/${{github.repository}}.git myfiles
                 cd myfiles && ls
         

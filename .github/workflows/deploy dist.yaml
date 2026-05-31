@@ -8,6 +8,6 @@ jobs:
               run: |
                 echo "cloning the repository"
                 echo "${{toJson(github)}}"
-                git clone https://github.com/${{github.repository}}.git myfiles
+                git clone https://github.com/rajeshkumar-a11y/react-cidcd-demo-gitactions.git myfiles
                 cd myfiles && ls
         

@@ -15,6 +15,7 @@ jobs:
             - name: Run Tests
               run: npm run test
     build:
+        needs: test
         runs-on: ubuntu-latest
         steps:
             - name: Get code
@@ -27,3 +28,10 @@ jobs:
               run: npm install
             - name: Run Build
               run: npm run build
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        steps:
+            - name: Deploy Dist
+              run: echo "Deployment Completed"

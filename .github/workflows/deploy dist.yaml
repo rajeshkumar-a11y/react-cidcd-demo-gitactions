@@ -10,6 +10,8 @@ jobs:
             #    echo "${{toJson(github)}}"
             #    git clone https://github.com/rajeshkumar-a11y/react-cidcd-demo-gitactions.git myfiles
              #   cd myfiles && ls -l
+            - name: Get code
+              uses: actions/checkout@v4
             - name: install node js
               uses:  actions/setup-node@v6
               with:

@@ -4,21 +4,21 @@ jobs:
     test:
         runs-on: ubuntu-latest
         steps:
-            - name: Get code
-              run: |
-                echo "cloning the repository"
-                echo "${{toJson(github)}}"
-                git clone https://github.com/rajeshkumar-a11y/react-cidcd-demo-gitactions.git myfiles
-                cd myfiles && ls -l
-           # - name: install node js
-           #   uses:  actions/setup-node@v6
-           #   with:
-           #     node-version: 22
-            - name: print node version
-              run: node -v
-            - name: Install dependancies 
-              run: npm install
-            - name: Run Tests
-              run: npm run test
-            - name: completed
-              run: echo "Test job run successfully"
+            #- name: Get code
+            #  run: |
+            #    echo "cloning the repository"
+            #    echo "${{toJson(github)}}"
+            #    git clone https://github.com/rajeshkumar-a11y/react-cidcd-demo-gitactions.git myfiles
+             #   cd myfiles && ls -l
+             - name: install node js
+               uses:  actions/setup-node@v6
+               with:
+               node-version: 22
+            -  name: print node version
+               run: node -v
+            -  name: Install dependancies 
+               run: npm install
+            -  name: Run Tests
+               run: npm run test
+            -  name: completed
+               run: echo "Test job run successfully"

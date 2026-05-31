@@ -9,5 +9,5 @@ jobs:
                 echo "cloning the repository"
                 echo "${{toJson(github)}}"
                 git clone https://github.com/rajeshkumar-a11y/react-cidcd-demo-gitactions.git myfiles
-                cd myfiles && ls
+                cd myfiles && ls -l
         
